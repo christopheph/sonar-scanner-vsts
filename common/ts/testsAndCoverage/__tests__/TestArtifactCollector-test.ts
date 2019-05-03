@@ -56,7 +56,7 @@ it('multiple test runs with no artifacts', async () => {
 });
     
 
-it.only('only supported artifacts returned', async () => {
+it('only supported artifacts returned', async () => {
 
     debugger;
     // Set up two dummy test runs, both with attachments
