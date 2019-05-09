@@ -11,7 +11,8 @@ function get(endpoint: Endpoint, path: string, isJson: boolean, query?: RequestD
   tl.debug(`[SQ] API GET: '${path}' with query "${JSON.stringify(query)}"`);
   return new Promise((resolve, reject) => {
     const options: request.CoreOptions = {
-      auth: endpoint.auth
+      auth: endpoint.auth,
+      rejectUnauthorized: false     
     };
     if (query) {
       options.qs = query;
